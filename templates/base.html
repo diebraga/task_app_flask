@@ -16,7 +16,16 @@
         $(document).ready(function() {
             $('.collapsible').collapsible();
         })
-    </script>
+
+        document.getElementById("matfix").addEventListener("click", function(e) {
+        e.stopPropagation();
+        });
+
+        $(document).ready(function(){
+        $('.datepicker').datepicker();
+        });
+
+    </script>  
 </body>
 
 </html>
