@@ -2,13 +2,18 @@
 <h3>Add Task</h3>
 <div class="row">
   <form action="" method="POST" class="col s12">
+    <div class="input-field col s12">
       <div class="row">
-          <div class="input-field col s12">
-              <i class="material-icons prefix">assignment</i>
-              <input id="task_name" name="task_name" type="text">
-              <label for="icon_prefix">Task Name</label>
-          </div>
-      </div>
+      <i class="material-icons prefix">poll</i>
+      <select id="categories" name="category_name">
+        <option value="" disabled selected>Choose Category</option>
+        {% for cat in categories %}
+        <option value="{{cat.category_name}}">{{cat.category_name}}</option>
+        {% endfor %}
+      </select>
+      <label>Materialize Select</label>
+    </div>  
+    </div>  
       <div class="row">
           <div class="input-field col s12">
               <i class="material-icons prefix">subject</i>
